@@ -11,7 +11,7 @@ import CartList from "./Pages/CartList";
 import Footer from "./Components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-toast.configure();
+// toast.configure();
 
 const App = () => {
   // Chicken lollipop , butter chicken , bav bhaji images to be changed
@@ -88,7 +88,7 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const addToCart = (data) => {
     setCart([...cart, { ...data, quantity: 1 }]);
-    toast("Wow so easy!");
+    toast("Added to cart!");
   };
 
   return (
@@ -119,7 +119,7 @@ const App = () => {
           </li>
           <li className="hover:bg-white hover:text-black py-1 px-0.5 text-center rounded-xl">
             <Link to="/cart">
-              Cart{" "}
+            <i class="fa-solid fa-cart-shopping"></i>{" "}
               <sup className="bg-sky-500 rounded-full px-1 pb-0.5">
                 {cart.length}
               </sup>

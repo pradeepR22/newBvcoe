@@ -96,19 +96,19 @@ const Home = () => {
               <br /> <sup>*</sup>Limited Offer{" "}
             </p>
             <button className="px-6 text-xl font-extrabold py-4 my-4 bg-amber-500 rounded-3xl  hover:bg-white hover:text-black">
-              <Link to="/dishes" >Get Started</Link>
+              <Link to="/dishes" >Get Started →</Link>
             </button>
           </div>
           <div className="img flex justify-center">
             <img
-              src="https://www.pngall.com/wp-content/uploads/2016/05/Burger-Free-Download-PNG.png"
+              src="https://www.franpos.com/wp-content/uploads/2021/01/img-restaurant-01.png"
               alt="burger"
-              className="w-4/5 -rotate-12"
+              className="w-3/5 -rotate-12"
             />
           </div>
         </div>
         <div className="grid grid-cols-2 w-full mb-10 mt-12">
-          <div className="info order-2">
+          <div className="info order-2 select-none">
             <h1 className="text-8xl font-bold">
               {" "}
               Traditional <br /> Vegetarian Food
@@ -118,14 +118,36 @@ const Home = () => {
               Taste Like Nothing <br /> Else in world!{" "}
             </p>
             <button className="px-6 text-xl py-4 my-2 bg-amber-500 hover:bg-amber-200 hover:text-black font-extrabold rounded-3xl">
-              <Link to="/dishes" >Get Started</Link>
+              <Link to="/dishes" >Taste here →</Link>
             </button>
           </div>
           <div className="img flex justify-center">
             <img
               src="https://www.neehees.com/wp-content/uploads/2020/10/Andra-Spicy-Masala-Dosa-min.png"
               alt="dosa"
-              className="w-4/5"
+              className="w-4/5 select-none"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-2 w-full mb-10 mt-12">
+          <div className="info select-none">
+            <h1 className="text-8xl font-bold">
+              {" "}
+              Refreshing  <br /> Beverages!
+            </h1>
+            <p className="text-2xl my-4">
+              {" "}
+              Food Tastes Better With Beverages. <br/> Now Available In All Flavours {" "}
+            </p>
+            <button className="px-6 text-xl py-4 my-2 bg-amber-500 hover:bg-amber-200 hover:text-black font-extrabold rounded-3xl">
+              <Link to="/dishes" >Get One Here →</Link>
+            </button>
+          </div>
+          <div className="img flex justify-center">
+            <img
+              src="https://cheesytrio.burgerking.com.sg/media/wv4dkqie/bk_print_bbqcheesytrio_microsite_product_image-03.png?width=1600&quality=85&rnd=132949040726970000"
+              alt="juices"
+              className="w-4/5 h-fit -rotate-12 select-none"
             />
           </div>
         </div>
