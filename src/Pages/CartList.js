@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function CartList({ cart }) {
   const [CART, setCART] = useState([]);
@@ -11,16 +12,16 @@ function CartList({ cart }) {
     <div className="text-white bg-white m-4 grid grid-row-1 rounded-2xl">
       {CART?.map((cartItem, cartIndex) => {
         return (
-          <div key={cartItem.id} className=" p-2  flex gap-5 content-around">
-            <div className="w-2/12">
+          <div key={cartItem.id} className=" p-2 flex flex-col md:flex-row gap-5 content-around">
+            <div className="w-12/12 md:w-2/12">
               <img
                 src={cartItem.imgUrl}
                 alt={cartItem.name}
-                className="w=3/12 rounded-xl object-cover  p-1"
+                className="w-12/12 md:w-3/12 rounded-xl object-cover  p-1"
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl text-black font-bold select-none">
+              <h1 className=" text-3xl md:text-4xl text-black font-bold select-none">
                 {cartItem.name}
               </h1>
               <div className="flex gap-4">
@@ -56,7 +57,7 @@ function CartList({ cart }) {
               </div>
 
               <h2 className="text-black text-3xl select-none">
-                <i class="fa-solid fa-indian-rupee-sign"></i>{" "}
+                <i className="fa-solid fa-indian-rupee-sign"></i>{" "}
                 {cartItem.price * cartItem.quantity}
               </h2>
             </div>
@@ -64,8 +65,8 @@ function CartList({ cart }) {
         );
       })}
       <div className="bg-green-300 rounded-b-2xl flex flex-row items-center ">
-        <p className="text-black text-4xl font-bold m-3 cursor-pointer select-none">
-          <i class="fa-solid fa-indian-rupee-sign"></i>{" "}
+        <p className="text-black text-2xl md:text-4xl font-bold m-3 cursor-pointer select-none">
+          <i className="fa-solid fa-indian-rupee-sign"></i>{" "}
           {CART.map((item) => item.price * item.quantity).reduce(
             (total, value) => total + value,
             0
@@ -73,12 +74,13 @@ function CartList({ cart }) {
           /-
         </p>
         <button
-          className="text-back text-xl font-extrabold m-3 p-2 rounded-2xl bg-red-400 hover:bg-white hover:text-black"
+          className="text-white  md:text-xl font-extrabold m-3 p-2 rounded-2xl bg-red-400 hover:bg-white hover:text-black"
           onClick={(refreshPage) => {
             window.location.reload();
+            alert("Redirecting... Don't refresh page !");
           }}
         >
-          Proceed to Pay
+          <Link to="/payment">Proceed to Pay</Link>
         </button>
       </div>
     </div>

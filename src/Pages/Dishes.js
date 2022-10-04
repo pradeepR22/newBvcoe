@@ -2,8 +2,8 @@ import React from "react";
 
 function Dishes({ product, addToCart }) {
   return (
-    <div className="text-white m-8">
-      <div className="grid grid-cols-3 gap-8">
+    <div className="text-white m-5 md:m-8">
+      <div className="grid  md:grid-cols-3 gap-8">
         {product.map((newA) => {
           return (
             <div key={newA.id} className="bg-white rounded-xl p-4">

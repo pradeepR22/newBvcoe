@@ -49,30 +49,30 @@ const Home = () => {
     },
   ];
   return (
-    <div className="text-white m-8">
-      <section className="grid grid-cols-2 justify-items-center ">
-        <div className="grid grid-cols-2 gap-4">
+    <div className="text-white m-3 md:m-8">
+      <section className="grid md:grid-cols-2 justify-items-center mt-10 md:mt-2 ">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {banner.map((New) => {
             return (
               <div key={New.id}>
                 <img
                   src={New.imgUrl}
                   alt={New.id}
-                  className="w-full h-full object-cover rounded-3xl hover:opacity-90"
+                  className="w-4/5 md:w-full h-full object-cover rounded-3xl hover:opacity-90"
                 />
               </div>
             );
           })}
         </div>
         <div className="m-4">
-          <h1 className="text-6xl  my-2 select-none">
+          <h1 className="text-4xl md:text-6xl  my-2 select-none">
             Good Food <br />
             Choices are <br />{" "}
             <span className="text-amber-600  font-extrabold">
               Good Investments
             </span>
           </h1>
-          <p className="text-4xl my-8 select-none">
+          <p className=" text-2xl md:text-4xl my-8 select-none">
             All happinesse depends on <br /> a leisurely breakfast <br />{" "}
             Freshness in Every Bite
           </p>
@@ -82,15 +82,15 @@ const Home = () => {
         </div>
       </section>
       <section className="mt-40">
-        <div className="grid grid-cols-2 w-full mb-10">
+        <div className="grid md:grid-cols-2 w-full mb-10">
           <div className="info">
-            <h1 className="text-8xl font-bold select-none">
+            <h1 className= " text-5xl md:text-8xl font-bold select-none">
               {" "}
               Quality Food <br /> Delivered!
             </h1>
-            <p className="text-3xl my-2 select-none">
+            <p className=" text-2xl md:text-3xl my-2 select-none">
               {" "}
-              <span className="text-amber-500 font-bold text-5xl ">
+              <span className="text-amber-500 font-bold text-4xl md:text-5xl ">
                 50% OFF
               </span>{" "}
               <br /> <sup>*</sup>Limited Offer{" "}
@@ -107,9 +107,9 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 w-full mb-10 mt-12">
-          <div className="info order-2 select-none">
-            <h1 className="text-8xl font-bold">
+        <div className="grid md:grid-cols-2 w-full mb-10 mt-12">
+          <div className="info md:order-2 select-none">
+            <h1 className="text-5xl md:text-8xl font-bold">
               {" "}
               Traditional <br /> Vegetarian Food
             </h1>
@@ -125,13 +125,13 @@ const Home = () => {
             <img
               src="https://www.neehees.com/wp-content/uploads/2020/10/Andra-Spicy-Masala-Dosa-min.png"
               alt="dosa"
-              className="w-4/5 select-none"
+              className="w-4/5 select-none mt-4 md:mt-0"
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 w-full mb-10 mt-12">
+        <div className="grid md:grid-cols-2 w-full mb-10 mt-12">
           <div className="info select-none">
-            <h1 className="text-8xl font-bold">
+            <h1 className="text-5xl md:text-8xl font-bold">
               {" "}
               Refreshing  <br /> Beverages!
             </h1>
@@ -147,7 +147,7 @@ const Home = () => {
             <img
               src="https://cheesytrio.burgerking.com.sg/media/wv4dkqie/bk_print_bbqcheesytrio_microsite_product_image-03.png?width=1600&quality=85&rnd=132949040726970000"
               alt="juices"
-              className="w-4/5 h-fit -rotate-12 select-none"
+              className="w-96 mt-3 md:mt-0 md:w-4/5 h-fit -rotate-12 select-none"
             />
           </div>
         </div>
@@ -155,7 +155,7 @@ const Home = () => {
       <section className="happy-customers text-center mt-52 mb-40 cursor-pointer select-none">
         <p className="uppercase text-sky-400 font-medium ">Testimonials </p>
         <h1 className="text-4xl uppercase mb-10 hover:text-orange-600">Our Happy Customers</h1>
-        <div className="grid grid-cols-3 gap-10 mb-8">
+        <div className="grid md:grid-cols-3 gap-10 mb-8">
           {card.map((newC) => {
             return (
               <div

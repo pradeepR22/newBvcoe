@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
+import Payment from "./Pages/Payment";
 import Dishes from "./Pages/Dishes";
 import { useState } from "react";
 import Signup from "./Pages/signup";
@@ -93,11 +94,11 @@ const App = () => {
 
   return (
     <>
-      <div className="text-white grid grid-cols-2 bg-amber-500  font-bold p-4  relative">
+      <div className="text-white md:grid md:grid-cols-2 bg-amber-500  font-bold p-4 w-full">
         <div className="text-3xl cursor-pointer">
           Food<span className="text-black font-extrabold">Ka</span>
         </div>
-        <ul className="grid grid-cols-7 gap-4 text-xl ">
+        <ul className="grid grid-cols-7 gap-4 text-xl hidden md:visible">
           <li className="hover:bg-white hover:text-black py-1 px-0.5 text-center rounded-xl">
             <Link to="/">Home</Link>
           </li>
@@ -119,7 +120,7 @@ const App = () => {
           </li>
           <li className="hover:bg-white hover:text-black py-1 px-0.5 text-center rounded-xl">
             <Link to="/cart">
-            <i class="fa-solid fa-cart-shopping"></i>{" "}
+              <i className="fa-solid fa-cart-shopping"></i>{" "}
               <sup className="bg-sky-500 rounded-full px-1 pb-0.5">
                 {cart.length}
               </sup>
@@ -141,6 +142,7 @@ const App = () => {
           element={<Dishes product={product} addToCart={addToCart} />}
         />
         <Route path="/cart" element={<CartList cart={cart} />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </>
