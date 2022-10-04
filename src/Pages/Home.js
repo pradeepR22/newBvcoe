@@ -60,20 +60,26 @@ const Home = () => {
             );
           })}
         </div>
-        <div>Someting exciting text</div>
+        <div className="m-4">
+          <h1 className="text-6xl  my-2">
+            Good Food <br/>Choices are <br /> <span className="text-amber-600  font-extrabold">Good Investments</span>
+          </h1>
+          <p className="text-4xl my-8">All happinesse depends on <br/> a leisurely breakfast <br/> Freshness in Every Bite</p>
+          <button className= "hover:bg-orange-300 hover:text-black bg-orange-500 text-2xl uppercase font-extrabold rounded-xl p-4 my-6"  >Order Now</button>
+        </div>
       </section>
-      <section className="mt-10">
+      <section className="mt-40">
         <div className="grid grid-cols-2 w-full mb-10">
           <div className="info">
             <h1 className="text-8xl font-bold">
               {" "}
               Quality Food <br /> Delivered!
             </h1>
-            <p className="text-2xl">
+            <p className="text-3xl my-2">
               {" "}
-              hsbjs s s bsd sj ns sn uds j s us bs j s{" "}
+              <span className="text-amber-500 font-bold text-5xl">50% OFF</span> <br/> <sup>*</sup>Limited Offer{" "}
             </p>
-            <button className="px-4 text-lg py-2 my-2 bg-amber-500 rounded-3xl">
+            <button className="px-6 text-xl font-extrabold py-4 my-4 bg-amber-500 rounded-3xl  hover:bg-amber-200 hover:text-black">
               Get Started
             </button>
           </div>
@@ -85,17 +91,17 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 w-full mb-10">
+        <div className="grid grid-cols-2 w-full mb-10 mt-12">
           <div className="info order-2">
             <h1 className="text-8xl font-bold">
               {" "}
               Traditional <br /> Vegetarian Food
             </h1>
-            <p className="text-2xl">
+            <p className="text-2xl my-4">
               {" "}
-              hsbjs s s bsd sj ns sn uds j s us bs j s{" "}
+              Taste Like Nothing <br/> Else in world! {" "}
             </p>
-            <button className="px-4 text-lg py-2 my-2 bg-amber-500 rounded-3xl">
+            <button className="px-6 text-xl py-4 my-2 bg-amber-500 hover:bg-amber-200 hover:text-black font-extrabold rounded-3xl">
               Get Started
             </button>
           </div>
@@ -108,8 +114,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="happy-customers text-center mt-10">
-        <p className="uppercase">Testimonials </p>
+      <section className="happy-customers text-center mt-52">
+        <p className="uppercase text-sky-400 font-medium ">Testimonials </p>
         <h1 className="text-4xl uppercase mb-10">Our Happy Customers</h1>
         <div className="grid grid-cols-3 gap-4">
           {card.map((newC) => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Dishes({ product , addToCart}) {
+function Dishes({ product, addToCart }) {
   return (
     <div className="text-white m-8">
       <div className="grid grid-cols-3 gap-8">
@@ -16,9 +16,9 @@ function Dishes({ product , addToCart}) {
                 <div className=" text-black rounded-b-xl">
                   <h2 className="text-3xl">{newA.name}</h2>
                   <p>Rs. {newA.price}</p>
-                  <button className="px-4 py-2 bg-amber-500 rounded-lg"
-                  onClick={()=> addToCart(newA)}
-                  
+                  <button
+                    className="px-4 py-2 bg-amber-500 rounded-lg"
+                    onClick={() => addToCart(newA)}
                   >
                     Add to Cart
                   </button>

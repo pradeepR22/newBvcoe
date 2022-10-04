@@ -83,23 +83,26 @@ const App = () => {
   // empty cart
   const [cart, setCart] = useState([]);
   const addToCart = (data) => {
-    setCart([...cart, {...data , quantity: 1}]);
+    setCart([...cart, { ...data, quantity: 1 }]);
     console.log(cart);
   };
 
   return (
     <>
-      <div className="text-white grid grid-cols-2 bg-amber-400 text-xl font-bold p-4">
-        <div>Name</div>
-        <ul className="grid grid-cols-7 gap-1">
+      <div className="text-white grid grid-cols-2 bg-amber-400  font-bold p-4">
+        <div className="text-3xl">
+          Food<span className="text-black font-extrabold">Ka</span>
+        </div>
+        <ul className="grid grid-cols-7 gap-4 text-xl">
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+
           <li>
             <Link to="/dishes">Dishes</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -112,7 +115,10 @@ const App = () => {
           </li>
           <li>
             <Link to="/cart">
-              Cart <sup className="bg-sky-500 rounded-full px-1 pb-0.5" >{cart.length}</sup>
+              Cart{" "}
+              <sup className="bg-sky-500 rounded-full px-1 pb-0.5">
+                {cart.length}
+              </sup>
             </Link>
           </li>
         </ul>
