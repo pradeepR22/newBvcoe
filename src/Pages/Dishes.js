@@ -17,7 +17,7 @@ function Dishes({ product, addToCart }) {
                   <h2 className="text-3xl">{newA.name}</h2>
                   <p>Rs. {newA.price}</p>
                   <button
-                    className="px-4 py-2 bg-amber-500 rounded-lg"
+                    className="px-4 py-2 bg-amber-500 rounded-lg hover:bg-gray-500 hover:text-white"
                     onClick={() => addToCart(newA)}
                   >
                     Add to Cart

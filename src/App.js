@@ -9,6 +9,9 @@ import { useState } from "react";
 import Signup from "./Pages/signup";
 import CartList from "./Pages/CartList";
 import Footer from "./Components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 
 const App = () => {
   // Chicken lollipop , butter chicken , bav bhaji images to be changed
@@ -85,16 +88,16 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const addToCart = (data) => {
     setCart([...cart, { ...data, quantity: 1 }]);
-    console.log(cart);
+    toast("Wow so easy!");
   };
 
   return (
     <>
-      <div className="text-white grid grid-cols-2 bg-amber-500  font-bold p-4">
+      <div className="text-white grid grid-cols-2 bg-amber-500  font-bold p-4  relative">
         <div className="text-3xl cursor-pointer">
           Food<span className="text-black font-extrabold">Ka</span>
         </div>
-        <ul className="grid grid-cols-7 gap-4 text-xl">
+        <ul className="grid grid-cols-7 gap-4 text-xl ">
           <li className="hover:bg-white hover:text-black py-1 px-0.5 text-center rounded-xl">
             <Link to="/">Home</Link>
           </li>
@@ -124,6 +127,9 @@ const App = () => {
           </li>
         </ul>
       </div>
+      <div className="text-black text-xl absolute bg-white">
+        <ToastContainer />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -136,7 +142,7 @@ const App = () => {
         />
         <Route path="/cart" element={<CartList cart={cart} />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 };
