@@ -28,19 +28,22 @@ const Home = () => {
     {
       id: 0,
       name: "Chris Bowler",
-      about: " something exciting text ",
+      about:
+        "This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.",
       img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
     },
     {
       id: 1,
       name: "Marie Laursen",
-      about: " something exciting text ",
+      about:
+        "It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and service. Staff are extremely knowledgeable and make great recommendations.",
       img: "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
     },
     {
       id: 2,
       name: "Ranolds K",
-      about: " something exciting text ",
+      about:
+        "We are so fortunate to have this place just a few minutes drive away from home. Food is stunning, both the tapas and downstairs restaurant. Cocktails wow, wine great and lovely selection of beers. Love this place and will continue to visit.",
       img: "https://images.unsplash.com/photo-1520451644838-906a72aa7c86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=550&q=80",
     },
   ];
@@ -62,10 +65,19 @@ const Home = () => {
         </div>
         <div className="m-4">
           <h1 className="text-6xl  my-2">
-            Good Food <br/>Choices are <br /> <span className="text-amber-600  font-extrabold">Good Investments</span>
+            Good Food <br />
+            Choices are <br />{" "}
+            <span className="text-amber-600  font-extrabold">
+              Good Investments
+            </span>
           </h1>
-          <p className="text-4xl my-8">All happinesse depends on <br/> a leisurely breakfast <br/> Freshness in Every Bite</p>
-          <button className= "hover:bg-orange-300 hover:text-black bg-orange-500 text-2xl uppercase font-extrabold rounded-xl p-4 my-6"  >Order Now</button>
+          <p className="text-4xl my-8">
+            All happinesse depends on <br /> a leisurely breakfast <br />{" "}
+            Freshness in Every Bite
+          </p>
+          <button className="hover:bg-orange-300 hover:text-black bg-orange-500 text-2xl uppercase font-extrabold rounded-xl p-4 my-6">
+            Order Now
+          </button>
         </div>
       </section>
       <section className="mt-40">
@@ -77,7 +89,10 @@ const Home = () => {
             </h1>
             <p className="text-3xl my-2">
               {" "}
-              <span className="text-amber-500 font-bold text-5xl">50% OFF</span> <br/> <sup>*</sup>Limited Offer{" "}
+              <span className="text-amber-500 font-bold text-5xl">
+                50% OFF
+              </span>{" "}
+              <br /> <sup>*</sup>Limited Offer{" "}
             </p>
             <button className="px-6 text-xl font-extrabold py-4 my-4 bg-amber-500 rounded-3xl  hover:bg-amber-200 hover:text-black">
               Get Started
@@ -99,7 +114,7 @@ const Home = () => {
             </h1>
             <p className="text-2xl my-4">
               {" "}
-              Taste Like Nothing <br/> Else in world! {" "}
+              Taste Like Nothing <br /> Else in world!{" "}
             </p>
             <button className="px-6 text-xl py-4 my-2 bg-amber-500 hover:bg-amber-200 hover:text-black font-extrabold rounded-3xl">
               Get Started
@@ -127,10 +142,14 @@ const Home = () => {
                 <img
                   src={newC.img}
                   alt={newC.name}
-                  className="rounded-full w-3/12"
+                  className="rounded-full w-3/12 hover:opacity-75"
                 />
-                <h3 className="text-amber-700">{newC.name}</h3>
-                <p>{newC.about}</p>
+                <h3 className="text-amber-700 font-semibold hover:text-black ">
+                  {newC.name}
+                </h3>
+                <p className="break-words m-1 text-left  hover:text-gray-700">
+                  {newC.about}
+                </p>
               </div>
             );
           })}
