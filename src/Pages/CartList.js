@@ -20,14 +20,14 @@ function CartList({ cart }) {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl text-black font-bold">{cartItem.name}</h1>
+              <h1 className="text-4xl text-black font-bold cursor-none">{cartItem.name}</h1>
               <div className="flex gap-4">
-                <button className="text-black bg-gray-300 hover:bg-red-300 w-10 p-2 rounded-md"
+                <button className="text-black bg-gray-300 hover:bg-red-300 w-10 p-2 rounded-md cursor-pointer"
                 
                 onClick={() => {
                   const _CART = CART.map((item, index) => {
                     return cartIndex === index
-                      ? { ...item, quantity: item.quantity - 1 }
+                      ? { ...item, quantity: item.quantity - 1>0 }
                       : item;
                   });
                   setCART(_CART);
@@ -35,11 +35,11 @@ function CartList({ cart }) {
                 >
                   -
                 </button>
-                <h1 className="text-2xl text-black text-left ">
+                <h1 className="text-2xl text-black text-left cursor-none ">
                   {cartItem.quantity}
                 </h1>
                 <button
-                  className="text-black bg-gray-300 hover:bg-green-300 w-10 p-2 rounded-md"
+                  className="text-black bg-gray-300 hover:bg-green-300 w-10 p-2 rounded-md cursor-pointer"
                   onClick={() => {
                     const _CART = CART.map((item, index) => {
                       return cartIndex === index
@@ -53,7 +53,7 @@ function CartList({ cart }) {
                 </button>
               </div>
 
-              <h2 className="text-black text-3xl">
+              <h2 className="text-black text-3xl cursor-not-allowed">
                 Rs. {cartItem.price * cartItem.quantity}
               </h2>
             </div>
@@ -61,7 +61,7 @@ function CartList({ cart }) {
         );
       })}
       <div className="bg-green-300 rounded-b-2xl flex flex-row items-center">
-        <p className="text-black text-4xl font-bold m-3">
+        <p className="text-black text-4xl font-bold m-3 cursor-pointer">
           Rs.{" "}
           {CART.map((item) => item.price * item.quantity).reduce(
             (total, value) => total + value,
